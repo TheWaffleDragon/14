@@ -10,7 +10,7 @@ df.rename(columns={'TITLE':'TYTUŁ','ARTIST':'ARTYSTA','YEAR':'ROK','HIGH POSN':
 n_artists = df['ARTYSTA'].nunique()
 print(f'na liscie znajduje się : {n_artists} indywidualnych artystów')
 #%%
-#3 Które zespoły pojawiają się najczęściej na liście?
+#3 Które zespoły pojawiają się najczęściej na liście?   
 freq_artists = df['ARTYSTA'].value_counts()
 n = freq_artists.max()
 artists_max = freq_artists.where(freq_artists==n)
@@ -21,6 +21,7 @@ print(f'Na liscie najczęciej pojawiały sie: {artists_max.index[0]} i {artists_
 df.columns = df.columns.astype("str")
 df.columns = df.columns.str.lower()
 df.columns = df.columns.str.capitalize()
+
 
 #%%
 #5 Wyrzuć z tabeli kolumnę ‘Max Poz’
